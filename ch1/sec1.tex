@@ -1,11 +1,20 @@
 \section{Formal Logic}
 
+\emph{Formalism} is the practice of reducing a problem to a notation with well-defined symbolic manipulations.
+
 \subsection{Inquiry Problems}
 
-Foo
+\dots
 
 \subsection{Connectives and Propositions}
 
+\begin{dfn}
+A \emph{statement} (also known as a \emph{proposition}) is a declarative sentence that is either true or false, but not both.
+\end{dfn}
+
+A complicated statement may consist of several simple statements joined together by words such as \emph{and}, \emph{or}, \emph{if\dots then}, etc.
+These connecting words are represented by the five \emph{logical connectives} shown in Table~\ref{logicalconnectives}.
+\begin{figure}
 \begin{center}
 \begin{tabular}{@{}c@{\qquad}c@{}}
 \textlabel{Name}&\textlabel{Symbol}\\
@@ -15,11 +24,57 @@ not&$\NOT$\\
 implies (if\dots then)&$\IF$\\
 if and only if&$\IFF$
 \end{tabular}
+\caption{The Five Logical Connectives\label{logicalconnectives}}
 \end{center}
+\end{figure}
 
 \subsection{Truth Tables}
 
-Foo
+We must define the meaning of the logical connectives.
+
+\begin{itemize}
+\item Any statement has two possible values: true (T) and false (F).
+\item We can use variables such as $p$ and $q$ for statements.
+\item We can stipulate the meaning of each logcial connective with \emph{truth tables} listing T/F values for every possible case.
+\end{itemize}
+
+\begin{tabular}{c|c}
+$p$ & $\NOT p$ \\\hline
+T   & F        \\
+F   & T
+\end{tabular}
+
+\begin{tabular}{c|c|c}
+$p$ & $q$ & $p\AND q$ \\\hline
+T   & T   & T         \\
+T   & F   & F         \\
+F   & T   & F         \\
+F   & F   & F
+\end{tabular}
+
+\begin{tabular}{c|c|c}
+$p$ & $q$ & $p\OR q$ \\\hline
+T   & T   & T        \\
+T   & F   & T        \\
+F   & T   & T        \\
+F   & F   & F
+\end{tabular}
+
+\begin{tabular}{c|c|c}
+$p$ & $q$ & $p\IF q$ \\\hline
+T   & T   & T        \\
+T   & F   & F        \\
+F   & T   & T        \\
+F   & F   & T
+\end{tabular}
+
+\begin{tabular}{c|c|c}
+$p$ & $q$ & $p\IFF q$ \\\hline
+T   & T   & T         \\
+T   & F   & F         \\
+F   & T   & F         \\
+F   & F   & T
+\end{tabular}
 
 \subsection{Logical Equivalences}
 
